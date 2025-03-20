@@ -11,3 +11,7 @@ C
 tests/test-utils.js,6/1/61f8ab4eaa3de5d13a6bff15eb44cd99d0d35ba1
 X
 (tests/authenticity-certification.test.ts,3/a/3a75d7646a75a54e855439da43a13bb8492af033
+P
+ contracts/material-sourcing.clar,1/5/1514261f7555995c78b00fd74cc22398afe89264
+O
+tests/material-sourcing.test.ts,2/a/2a3f8d67c3857a56232ccc4c85a1c96d44c67ac8
