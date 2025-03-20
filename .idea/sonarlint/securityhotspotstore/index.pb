@@ -1,3 +1,21 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Y
+)contracts/authenticity-certification.clar,4/e/4e116ad4e89a7d196f08041aada5efb0d58aca24
+T
+$contracts/craftsperson-registry.clar,5/a/5acbab8be39e2f28f8d25993945c563694352988
+S
+#tests/craftsperson-registry.test.ts,3/4/34925636989be01132f930eafd771ebd00ccbaca
+C
+tests/test-utils.js,6/1/61f8ab4eaa3de5d13a6bff15eb44cd99d0d35ba1
+X
+(tests/authenticity-certification.test.ts,3/a/3a75d7646a75a54e855439da43a13bb8492af033
+P
+ contracts/material-sourcing.clar,1/5/1514261f7555995c78b00fd74cc22398afe89264
+O
+tests/material-sourcing.test.ts,2/a/2a3f8d67c3857a56232ccc4c85a1c96d44c67ac8
+U
+%contracts/technique-verification.clar,b/7/b74408191b286a30b97b167f19a515c81ba0c6c1
+T
+$tests/technique-verification.test.ts,1/0/10a7cb8b8cbdc93a377491d3208f4921d2ed4ecb
