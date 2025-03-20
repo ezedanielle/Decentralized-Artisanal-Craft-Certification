@@ -1,30 +1,50 @@
+;; Craftsperson Registration Contract
+;; Records details of skilled artisans
 
-;; title: craftsperson-registry
-;; version:
-;; summary:
-;; description:
+(define-data-var last-id uint u0)
 
-;; traits
-;;
+(define-map craftspeople
+  { id: uint }
+  {
+    name: (string-utf8 100),
+    location: (string-utf8 100),
+    specialty: (string-utf8 100),
+    registration-date: uint,
+    active: bool
+  }
+)
 
-;; token definitions
-;;
+(define-public (register-craftsperson (name (string-utf8 100)) (location (string-utf8 100)) (specialty (string-utf8 100)))
+  (let
+    (
+      (new-id (+ (var-get last-id) u1))
+    )
+    (var-set last-id new-id)
+    (ok (map-set craftspeople
+      { id: new-id }
+      {
+        name: name,
+        location: location,
+        specialty: specialty,
+        registration-date: block-height,
+        active: true
+      }
+    ))
+  )
+)
 
-;; constants
-;;
+(define-read-only (get-craftsperson (id uint))
+  (map-get? craftspeople { id: id })
+)
 
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+(define-public (update-craftsperson-status (id uint) (active bool))
+  (let
+    (
+      (craftsperson (unwrap! (map-get? craftspeople { id: id }) (err u404)))
+    )
+    (ok (map-set craftspeople
+      { id: id }
+      (merge craftsperson { active: active })
+    ))
+  )
+)
